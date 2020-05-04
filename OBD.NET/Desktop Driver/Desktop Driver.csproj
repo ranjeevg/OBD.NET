@@ -94,5 +94,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBD.NET.Common\OBD.NET.Common.csproj">
+      <Project>{d985b70e-cdf3-4cf1-ab5d-8d19c7fe7b31}</Project>
+      <Name>OBD.NET.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ODB.NET.Desktop\ODB.NET.Desktop.csproj">
+      <Project>{14cb98e1-95de-4923-8896-fdf5171aa49e}</Project>
+      <Name>ODB.NET.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
