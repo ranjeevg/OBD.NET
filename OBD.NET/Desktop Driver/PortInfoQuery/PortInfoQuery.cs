@@ -23,7 +23,7 @@ namespace Desktop_Driver.PortInfoQuery
             this.COMPort = s;
         }
 
-        private string DiscoverCOMPort()
+        private string DiscoverCOMPorts()
         {
             /*************************************************************************************
              * 
