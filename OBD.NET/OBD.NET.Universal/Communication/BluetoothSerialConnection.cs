@@ -7,6 +7,7 @@ using Windows.Devices.Bluetooth.Rfcomm;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
 using System.Linq;
+using OBD.NET.Common.Communication;
 
 namespace OBD.NET.Communication
 {

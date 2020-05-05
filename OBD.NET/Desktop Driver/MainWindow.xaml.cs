@@ -24,6 +24,10 @@ namespace Desktop_Driver
         public MainWindow()
         {
             InitializeComponent();
+            #region sizing
+            vb.Width = SystemParameters.WorkArea.Width;
+            vb.Height = SystemParameters.WorkArea.Height;
+            #endregion
         }
     }
 }
