@@ -13,22 +13,17 @@ namespace Desktop_Driver.PortInfoQuery
         #endregion
 
         #region Methods
-        private string getCOMPort()
+        private string GetCOMPort()
         {
             return this.COMPort;
         }
 
-        private void setCOMPort(string s)
+        private void SetCOMPort(string s)
         {
             this.COMPort = s;
         }
 
-        private void nullCOMPort()
-        {
-            this.COMPort = String.Empty;
-        }
-
-        private string discoverCOMPort()
+        private string DiscoverCOMPort()
         {
             /*************************************************************************************
              * 
@@ -38,6 +33,11 @@ namespace Desktop_Driver.PortInfoQuery
              * 
              ************************************************************************************/
             throw new NotImplementedException();
+        }
+
+        private void NullifyCOMPort()
+        {
+            this.COMPort = String.Empty;
         }
         #endregion
     }
