@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO.Ports;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -13,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ODB.NET.Desktop;
 using OBD.NET.Common;
+using Desktop_Driver.PortInfoQuery;
 
 namespace Desktop_Driver
 {
@@ -25,8 +27,13 @@ namespace Desktop_Driver
         {
             InitializeComponent();
             #region sizing
-            vb.Width = SystemParameters.WorkArea.Width;
-            vb.Height = SystemParameters.WorkArea.Height;
+            //vb.Width = SystemParameters.WorkArea.Width;
+            //vb.Height = SystemParameters.WorkArea.Height;
+            #endregion
+
+            #region establishing a Bluetooth connection
+            
+
             #endregion
         }
     }
