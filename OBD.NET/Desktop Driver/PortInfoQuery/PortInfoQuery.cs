@@ -2,28 +2,9 @@
 
 namespace Desktop_Driver.PortInfoQuery
 {
-    class PortInfoQuerier
+    public static class PortInfoQuerier
     {
-        #region Constructors
-        public PortInfoQuery() { }
-        #endregion
-
-        #region Fields
-        private string COMPort;
-        #endregion
-
-        #region Methods
-        private string GetCOMPort()
-        {
-            return this.COMPort;
-        }
-
-        private void SetCOMPort(string s)
-        {
-            this.COMPort = s;
-        }
-
-        public string[] DiscoverCOMPorts()
+        public static string[] DiscoverCOMPorts()
         {
             /***********************************************************************************************
              *  Description:
@@ -55,20 +36,19 @@ namespace Desktop_Driver.PortInfoQuery
             {
                 DiscoveredCOMPorts = System.IO.Ports.SerialPort.GetPortNames();
                 if (DiscoveredCOMPorts.Length == 0)
-                    System.Windows.MessageBox.Show("No COM ports found, please check Bluetooth settings.");
+                {
+                    System.Threading.Thread.Sleep(1500);
+                    System.Windows.MessageBox.Show
+                        ("No COM ports found, please check Bluetooth settings on your computer.");
+                }
             }
             catch (Exception ex)
             {
+                System.Threading.Thread.Sleep(1500);
                 System.Windows.MessageBox.Show(ex.Message);
             }
             // note: this string[] is null if no COM ports are found, so no issues there
             return DiscoveredCOMPorts;
         }
-
-        private void NullifyCOMPort()
-        {
-            this.COMPort = String.Empty;
-        }
-        #endregion
     }
 }

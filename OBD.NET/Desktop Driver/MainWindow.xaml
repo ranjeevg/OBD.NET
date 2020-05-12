@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop_Driver"
         mc:Ignorable="d"
-        Title="OBD II Reader" WindowStartupLocation="CenterScreen" Topmost="True" WindowState="Maximized" Height="1541.4">
+        Title="OBD II Reader" WindowStartupLocation="CenterScreen" Topmost="True" WindowState="Maximized" Height="1541.4" Background="#FFAFD9DD">
     <Grid x:Name="gr0">
-        <ComboBox x:Name="comPortList" HorizontalAlignment="Left" Margin="115,48,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" Text="Select COM Port:" VerticalAlignment="Top" Width="100" BorderBrush="{x:Null}"/>
+        <ComboBox x:Name="comPortList" HorizontalAlignment="Left" Margin="160,113,0,0" VerticalAlignment="Top" Width="85" Height="23"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="35,113,0,0" TextWrapping="Wrap" Text="Select COM Port:" VerticalAlignment="Top" Width="120" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="14"/>
     </Grid>
 </Window>
