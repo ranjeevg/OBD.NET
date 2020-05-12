@@ -32,7 +32,21 @@ namespace Desktop_Driver
             #endregion
 
             #region establishing a Bluetooth connection
-            
+            PortInfoQuery.PortInfoQuery piq = new PortInfoQuery.PortInfoQuery();
+            string[] ports = piq.DiscoverCOMPorts();
+
+            // don't waste time if the array is null or empty
+            if (!(ports.Length == 0 || ports is null))
+            {
+                foreach(string port in ports)
+                {
+                    comPortList.Items.Add(port);
+                }
+            }
+
+            #region not implemented the rest
+            throw new NotImplementedException();
+            #endregion
 
             #endregion
         }
