@@ -39,7 +39,7 @@ namespace Desktop_Driver
 
             #region establishing a Bluetooth connection
             PortInfoQuerier piq = new PortInfoQuerier();
-            string[] ports = piq.DiscoverCOMPorts();
+            string[] ports = piq.DiscoverCOMPorts(); // edge cases dealt with in the DiscoverCOMPorts method
 
             #region should this even be in the constructor for the main class
             // don't waste time if the array is null or empty
