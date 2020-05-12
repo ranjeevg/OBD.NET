@@ -25,13 +25,31 @@ namespace Desktop_Driver.PortInfoQuery
             this.COMPort = s;
         }
 
-        private string[] DiscoverCOMPorts()
+        public string[] DiscoverCOMPorts()
         {
-            /*************************************************************************************
-             * 
+            /***********************************************************************************************
+             *  Description:
+             *      This method tries to find all available COM ports to connect. If no COM ports are 
+             *      found, it shows a message asking the user to check Bluetooth settings. If an exception
+             *      is caught, this method shows a message with the exception message.
+             *      
+             *  Input:
+             *      None
+             *      
+             *  Output:
+             *      A string[] where each element is a COM port.
+             *      
+             *  Assumptions:
+             *      None (We're catching any exceptions, and checking to see if DiscoverCOMPorts is null)
              *  
+             *  To Work On: 
+             *      Try to filter through the selected COM ports and select only Bluetooth ports.
+             *      
+             *  Note to self: 
+             *      On my computer, this method should return a 1-element string[] with the element of 
+             *      "COM5".
              * 
-             ************************************************************************************/
+             **********************************************************************************************/
 
             string[] DiscoveredCOMPorts = null;
             // trying to 
@@ -45,12 +63,8 @@ namespace Desktop_Driver.PortInfoQuery
             {
                 System.Windows.MessageBox.Show(ex.Message);
             }
+            // note: this string[] is null if no COM ports are found, so no issues there
             return DiscoveredCOMPorts;
-
-            //#region Not Implemented Exception
-            //// this is a really neat feature, BTW. I wonder if C++ and Java have similar features
-            //throw new NotImplementedException();
-            //#endregion
         }
 
         private void NullifyCOMPort()
