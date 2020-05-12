@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO.Ports;
-using System.Runtime.InteropServices;
 
 namespace Desktop_Driver.PortInfoQuery
 {
@@ -55,7 +53,7 @@ namespace Desktop_Driver.PortInfoQuery
             // trying to 
             try
             {
-                DiscoveredCOMPorts = SerialPort.GetPortNames();
+                DiscoveredCOMPorts = System.IO.Ports.SerialPort.GetPortNames();
                 if (DiscoveredCOMPorts.Length == 0)
                     System.Windows.MessageBox.Show("No COM ports found, please check Bluetooth settings.");
             }
