@@ -2,7 +2,7 @@
 
 namespace Desktop_Driver.PortInfoQuery
 {
-    class PortInfoQuery
+    class PortInfoQuerier
     {
         #region Constructors
         public PortInfoQuery() { }

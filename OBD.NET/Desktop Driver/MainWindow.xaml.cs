@@ -1,8 +1,11 @@
 ﻿using System;
+#region as-yet-unneeded using statements
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+#endregion
 using System.Windows;
+#region more as-yet-unneeded using statements
 using System.IO.Ports;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,9 +15,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+#endregion
+#region oh, we're DEFINITELY going to be using these using statements, but perhaps not right now
 using ODB.NET.Desktop;
 using OBD.NET.Common;
 using Desktop_Driver.PortInfoQuery;
+#endregion
 
 namespace Desktop_Driver
 {
@@ -32,9 +38,10 @@ namespace Desktop_Driver
             #endregion
 
             #region establishing a Bluetooth connection
-            PortInfoQuery.PortInfoQuery piq = new PortInfoQuery.PortInfoQuery();
+            PortInfoQuerier piq = new PortInfoQuerier();
             string[] ports = piq.DiscoverCOMPorts();
 
+            #region should this even be in the constructor for the main class
             // don't waste time if the array is null or empty
             if (!(ports.Length == 0 || ports is null))
             {
@@ -43,12 +50,9 @@ namespace Desktop_Driver
                     comPortList.Items.Add(port);
                 }
             }
+            #endregion // should this be in the MainWindow constructor
 
-            #region not implemented the rest
-            throw new NotImplementedException();
-            #endregion
-
-            #endregion
+            #endregion // establishing a Bluetooth connection
         }
     }
 }
