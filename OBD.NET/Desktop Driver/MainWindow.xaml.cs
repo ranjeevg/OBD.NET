@@ -44,7 +44,7 @@ namespace Desktop_Driver
             if (ports.Length == 0 || ports is null)
             {
                 System.Threading.Thread.Sleep(1500);
-                System.Windows.MessageBox.Show
+                MessageBox.Show
                     ("No COM ports found, please check Bluetooth settings on your computer.");
                 this.Close();
             }
