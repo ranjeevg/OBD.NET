@@ -35,12 +35,6 @@ namespace Desktop_Driver.PortInfoQuery
             try
             {
                 DiscoveredCOMPorts = System.IO.Ports.SerialPort.GetPortNames();
-                if (DiscoveredCOMPorts.Length == 0)
-                {
-                    System.Threading.Thread.Sleep(1500);
-                    System.Windows.MessageBox.Show
-                        ("No COM ports found, please check Bluetooth settings on your computer.");
-                }
             }
             catch (Exception ex)
             {

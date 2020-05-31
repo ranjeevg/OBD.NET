@@ -42,13 +42,18 @@ namespace Desktop_Driver
             string[] ports = PortInfoQuerier.DiscoverCOMPorts(); // edge cases dealt with in the DiscoverCOMPorts method
 
             #region should this even be in the constructor for the main class
-            // don't waste time if the array is null or empty
-            if (!(ports.Length == 0 || ports is null))
+            // if no ports found, display a message and close the window
+            if (ports.Length == 0 || ports is null)
             {
-                foreach(string port in ports)
-                {
+                System.Threading.Thread.Sleep(1500);
+                System.Windows.MessageBox.Show
+                    ("No COM ports found, please check Bluetooth settings on your computer.");
+                this.Close();
+            }
+            else
+            {
+                foreach (string port in ports)
                     comPortList.Items.Add(port);
-                }
             }
             #endregion // should this be in the MainWindow constructor
 
