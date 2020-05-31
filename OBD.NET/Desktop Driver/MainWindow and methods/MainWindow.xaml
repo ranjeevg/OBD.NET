@@ -1,0 +1,16 @@
+﻿<Window x:Name="window0" x:Class="Desktop_Driver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop_Driver"
+        mc:Ignorable="d"
+        Title="OBD II Reader" WindowStartupLocation="CenterScreen" Topmost="True" WindowState="Maximized" Height="1541.4" Background="#FFAFD9DD">
+    <ScrollViewer x:Name="scrollviewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="gr0">
+            <ComboBox x:Name="comPortList" HorizontalAlignment="Left" Margin="160,62,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="35,62,0,0" TextWrapping="Wrap" Text="Select COM Port:" VerticalAlignment="Top" Width="120" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="14"/>
+            <Button x:Name="ConnectBluetooth" Content="Connect with available OBD scanners" HorizontalAlignment="Left" Margin="320,62,0,0" VerticalAlignment="Top" Width="210" Height="23" Click="ConnectBluetooth_Click"/>
+        </Grid>
+    </ScrollViewer>
+</Window>
