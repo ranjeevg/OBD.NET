@@ -1,11 +1,9 @@
 ﻿using System;
+using System.Windows;
 #region as-yet-unneeded using statements
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-#endregion
-using System.Windows;
-#region more as-yet-unneeded using statements
 using System.IO.Ports;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 #endregion
-#region oh, we're DEFINITELY going to be using these using statements, but perhaps not right now
+#region oh, we're DEFINITELY going to be using these using statements
 using ODB.NET.Desktop;
 using OBD.NET.Common;
 using Desktop_Driver.PortInfoQuery;
@@ -39,7 +37,7 @@ namespace Desktop_Driver
 
             #region establishing a Bluetooth connection
             
-            string[] ports = PortInfoQuerier.DiscoverCOMPorts(); // edge cases dealt with in the DiscoverCOMPorts method
+            string[] ports = PortInfoQuerier.DiscoverCOMPorts();
 
             #region should this even be in the constructor for the main class
             // if no ports found, display a message and close the window
