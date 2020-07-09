@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace OBD.NET.DesktopDriver
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml - the default Bluetooth port
     /// </summary>
     public partial class MainWindow : Window
     {
